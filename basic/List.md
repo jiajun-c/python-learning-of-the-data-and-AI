@@ -4,7 +4,7 @@
 a = [1,2,3,4]
 ```
 
-##2. add or remove the elem
+## 2. add or remove the elem
 The remove function will remove the elem that you pass in, if you pass in the 1
 the 1 will not exist in you list
 ```python
