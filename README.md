@@ -14,7 +14,7 @@ All the markdown file will have the relevant the .py file that is executable
 
 [dict](./basic/dict.md)
 
-###2.the grammar
+### 2.the grammar
 
 [lambda](./basic/lamda.md)
 
