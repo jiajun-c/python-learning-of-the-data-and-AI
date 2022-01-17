@@ -23,3 +23,8 @@ All the markdown file will have the relevant the .py file that is executable
 
 ### 1. the basic library
 [numpy](./AI/numpy_basic.md)
+
+## 2. 单变量线性回归
+
+[continue to update](./AI/线性回归/single_regression.md)
+
