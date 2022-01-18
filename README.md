@@ -22,7 +22,7 @@ All the markdown file will have the relevant the .py file that is executable
 ## The part of the AI learning
 
 ### 1. the basic library
-[numpy](./AI/numpy_basic.md)
+[numpy](AI/basic_lib/numpy_basic.md)
 
 ## 2. 单变量线性回归
 
