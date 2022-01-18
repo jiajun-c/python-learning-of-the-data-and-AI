@@ -51,7 +51,40 @@ If the cost function only have the $\theta_1$ , it will update until it get the 
 ![Screen Shot 2022-01-18 at 9.04.07 AM](/Users/chengjiajun/Desktop/code/img/Screen Shot 2022-01-18 at 9.04.07 AM.png)
 
 
+## the example
+we get the data from the kaggle, and it is stored in the `线性回归/training_data`
+```python
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+# import needed
+train = pd.read_csv("./training_data/train.csv")
+test = pd.read_csv("./training_data/test.csv")
+train = train.dropna()
+test = test.dropna()
+# 使用dropna方法去删除我们数据中的空格行
+X_train = np.array(train.iloc[:, :-1].values)
+y_train = np.array(train.iloc[:, 1].values)
+X_test = np.array(test.iloc[:, :-1].values)
+y_test = np.array(test.iloc[:, 1].values)
+# smodel = LinearRegression(fit_intercept=True, normalize=True, copy_X=True, n_jobs=-1)
+# this model is a old style, and it will get the warning
+model = make_pipeline(StandardScaler(with_mean=False), LinearRegression())
+# 对我们的数据进行处理,得到合适的数据
+model.fit(X_train, y_train)
+# 使用我们的训练数据进行训练
+y_pred = model.predict(X_test)
+accuracy = model.score(X_test, y_test)
+# 使用测试数据得到我们的模型的准确性
+plt.plot(X_train, model.predict(X_train), color='green')
+plt.savefig("./output_img/out1.png")
+print(accuracy)
+```
 
+[参考](https://www.kaggle.com/kareem3egm/learn-machine-learning-faster-1)
 ## some limitation of this algorithm, you may come to a local best soluation
 
 It is called the batch gradient descent alghorithm.
