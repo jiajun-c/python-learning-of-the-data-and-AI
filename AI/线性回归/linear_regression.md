@@ -89,5 +89,75 @@ print(accuracy)
 
 It is called the batch gradient descent alghorithm.
 
+## Multple features(varibles) 
 
+![Screen Shot 2022-01-19 at 11.39.22 AM](/Users/chengjiajun/Desktop/code/img/Screen Shot 2022-01-19 at 11.39.22 AM.png)
+
+one training example consist of the [x1... y]
+
+Hypothesis: $h_{\theta}(x) = \theta^Tx$
+
+Parameters: $\theta_1...\theta_n$
+
+Cost_function: $J(\theta_0,\theta_1..\theta_n) = \frac{1}{2m}\sum_{i=1}^m(h_{\theta}(x^i) - y^i)x^i$
+
+Gradient descent:
+
+​	Repeat {
+
+​		$\theta_j := \theta_j - \alpha\frac{\partial J}{\partial\theta_j}$
+
+}
+
+be remind. that the $x_0$ is the 1
+
+### the fearure scaling
+
+make sure feature are on a similar scale
+
+<img src="/Users/chengjiajun/Library/Application Support/typora-user-images/Screen Shot 2022-01-19 at 1.51.08 PM.png" alt="Screen Shot 2022-01-19 at 1.51.08 PM" style="zoom: 67%;" />
+
+Now goes on the $\theta_2$ it will be slow
+
+We can sub the x1 with the 2000 and sub the x2 with the 5
+
+So the target of this it to make every varible are in the range (-1, 1)
+
+### the mean normalization
+
+We can replace the $x_i$ with the $x_i - u_i$ to make sure that the average of the varible have the average of the zero
+
+### the choose of the $\alpha$
+
+In some situation, we can see with the $\alpha$ is too big, if the tendency is like belw, we should try to use a small $\alpha$
+
+![Screen Shot 2022-01-19 at 2.18.56 PM](/Users/chengjiajun/Library/Application Support/typora-user-images/Screen Shot 2022-01-19 at 2.18.56 PM.png)
+
+
+
+### the feature and the quantic regression
+
+We can define the new feature to solve our problem. 
+
+When use create the new feature, it is important to use the mean normalization
+
+We can use the $\sqrt{x}, x^2 ...$
+
+# the normal equation method
+
+![Screen Shot 2022-01-19 at 2.42.57 PM](/Users/chengjiajun/Desktop/code/img/Screen Shot 2022-01-19 at 2.42.57 PM.png)
+
+You can find the $\theta$ simply by solve the equation
+
+The ans above may look like .....,but you can verify it
+
+## the conclusion
+
+When the n is large, the gradient works well, but it may need may times of the iterator
+
+because the normal opmtize for the equation is much slower.
+
+
+
+ps: in some times, the equation may be invertible. 
 
