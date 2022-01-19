@@ -1,0 +1,6 @@
+you can use the varible operation in the linear algebra
+1. the inverse of the matrix
+matrix.inv()
+
+2. The feature vectors
+You can use the

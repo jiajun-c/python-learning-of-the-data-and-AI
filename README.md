@@ -27,6 +27,7 @@ All the markdown file will have the relevant the .py file that is executable
 ### 1. the basic library
 
 [numpy](AI/basic_lib/numpy_basic.md)
+[pandas](AI/basic_lib/pandas_learn.md)
 
 ## 2. the linear regression
 [link](./AI/线性回归/linear_regression.md)
