@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 from sklearn.linear_model import LinearRegression
-
+import seaborn as sns
 data = pd.read_csv('./Fish.csv')
 df = data.copy()
 df.sample(10)
@@ -42,4 +42,13 @@ num = sp['Species']
 plt.bar(sp.index, num)
 plt.savefig("./img/Species_num.png")
 
+# 显示的是我们的pandas数组的相关性
+sns.heatmap(df.corr(method='pearson'),annot=True,cmap='YlGnBu')
+g = sns.pairplot(df, kind='scatter',hue='Species')
+filename = "./scatter.png"
+# g.savefig(filename, dpi=1080)
 
+out = sns.boxplot(x=df['Weight'])
+filename = "./box.png"
+out = out.get_figure()
+out.savefig(filename,dpi = 800)
