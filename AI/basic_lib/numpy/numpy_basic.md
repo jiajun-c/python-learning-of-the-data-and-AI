@@ -46,6 +46,12 @@ You can use the reshape function and pass in the len and the wide
 ,if you worry about making  a WA, you can consider pass in the 
 -1 and the numpy will calculate it.
 
+whats more , you can change the dim of the array
+```python
+x = np.range(1,5,1)
+y = x[np.newaxis,: ] # it will be [[1,2,3,4]]
+y = x[:,np.newaxis] # it will be [[1],[2],[3],[4] ]
+```
 ## 5. stack the array together
 Sometimes we to merge two matrix together, we have two choices,
 one is to merge according to the row, which like
