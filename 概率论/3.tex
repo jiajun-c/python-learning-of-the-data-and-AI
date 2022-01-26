@@ -1,0 +1,86 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\title{第三章-条件概率和独立性}
+\author{程家骏}
+\date{\today}
+\begin{document}
+\maketitle
+\section{条件概率}
+条件概率的基本概念 P(A|B) = P(AB)/P(B) 指的是在我们的B发生的条件下A发生的
+概率
+\par
+例子: A有80\%的概率将他的钥匙放在了他外套的两个口袋中,他40\%的确定在左边的口袋,40\%在右边的口袋里面,所以
+如果检查了左边的口袋没有找到钥匙,那么钥匙在右边口袋的条件概率是多少
+\par 解: 首先这个是一个条件概率,表示的是在我们的钥匙不在左边的口袋里面的条件下
+,在右边的概率
+\begin{equation}
+    P(A|B^t) = P(AB^t)/P(B^t) = 0.4/0.6 = 2/3 \nonumber
+\end{equation}
+
+\fbox{%
+  \parbox{\textwidth}{
+    \begin{center}
+        \textbf{乘法规则}
+        \begin{equation}
+            P(E_1 E_2E_3...E_n) = P(E_1)P(E_2|E_1)...P(E_n|E_1...E_{n-1})
+        \end{equation}
+    \end{center}
+  }%
+}
+\newline
+\par 
+例子: 在N个人从N个帽子中进行随机的挑选的时候,求刚好有K个人配对成功的概率是
+\par 
+\begin{equation}
+\begin{aligned}
+    P(E_1 ... E_k) &= P(E_1)P(E_1|E_2) ... p(E_k|E_1..E_{n-1})\nonumber\\
+    &= \frac{1}{N} .. \frac{1}{N-k+1} = \frac{(N-k)!}{n!}
+\end{aligned}
+\end{equation}
+假设这k个人都实现了拿到正确的帽子,那么剩下的人全部错开的概率是
+\begin{equation}
+    P = \frac{(N-k)!}{N!}\nonumber
+\end{equation}
+
+
+然后将这两个式子进行处理即可
+
+\section{贝叶斯公式}
+贝叶斯公式: $E = EF\cup EF^c$
+\par 
+例子: 一项血液化验有95\% 的把握去诊断某种疾病,但是,这个结果有1\%的可能是假的,如果
+该疾病的患者事实上仅占总人口的0.5\% ,如果该人化验结果为阳性,则该人确实患疾病
+的概率为多少
+\par 
+解:
+假设D为患病,E为其化验结果为阳性
+\begin{equation}
+    \begin{aligned}
+        P(D|E) &= P(DE)/P(E)\\ \nonumber
+        &= \frac{0.95\times 0.005 }{0.005\times 0.95 + 0.995\times 0.01}\\
+        &\approx 0.323
+    \end{aligned}
+\end{equation} 
+
+
+\section{独立性事件}
+独立性的公式:P(EF) = P(E)P(F)
+\par 
+如果上面这个公式是成立的,那么我们可以知道这两个事件是独立的事件
+比如我们从扑克牌中抽取一张牌,这个牌的花色为黑桃和这个牌的数字是某个数字的情况是独立的.
+所以我们可以直接去使用上面的公式去得到结果
+
+\par 
+例子:掷两枚均匀的骰子,总数点数之和为6和第一枚点数为4的概率的事件概率之间
+\begin{equation}
+    \begin{aligned}
+        &P(E F) = P({4,2}) = \frac{1}{36}\\ \nonumber
+        &P(E)P(F) = \frac{5}{36}\times\frac{1}{6} = \frac{5}{216}
+    \end{aligned}
+\end{equation}
+所以可以看出是不独立的事件
+\end{document}
+
