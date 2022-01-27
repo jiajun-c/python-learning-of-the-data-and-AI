@@ -1,0 +1,6 @@
+posibility.pdf
+.idea
+*.aux
+*.log
+*.sync*
+*.ipynb*
