@@ -43,3 +43,6 @@ All the markdown file will have the relevant the .py file that is executable
 [link](./AI/线性回归/linear_regression.md)
 
 
+## 3. The decision tree
+You can find the jupyter notebook and the training data in the folder named 决策树
+[link](./AI/决策树/d_tree_use.md)
