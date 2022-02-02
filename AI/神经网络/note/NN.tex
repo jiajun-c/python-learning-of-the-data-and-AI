@@ -1,0 +1,50 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\title{神经网络}
+\author{Half}
+\date{\today}
+\begin{document}
+\maketitle
+\section{neuron model}
+\par
+在神经网络中, 基本的原理是对于每一个神经原来说, 如果我们的输入超过一定的阈值的时候,我们的神经元将会被激活,向其他的神经元释放化学物质
+.
+\par 
+我们通常使用阶跃函数作为我们的激活函数 ,将输入的值转换为0/1, 有时候也使用sigmod函数将我们的值转换到0,1之间
+\par 
+当我们将很多个这样的神经元的时候就成了神经网络
+\par 
+输出的阈值函数可以表示为
+\begin{equation}
+    y = f(\sum_{i=1}^n w_ix_i-\theta)
+\end{equation}
+\section{Perception}
+\par 
+感知机由两层组成, 一层是我们的输入层, 一层是我们的输出层, 输出层是我们的M-P神经元,也被称作是阈值逻辑神经元
+\par 
+与运算$y =f(x_1+x_2-2)$
+或运算$y = f(x_1+x_2-0.5)$
+非运算$y = f(-0.6x+0.5)$\\
+注意此处的f函数是我们的阶s跃函数
+\par 
+对于单层的神经网络而言,通常能够解决的只有我们的线性可分问题,如果要解决非线性可分的问题,我们需要去使用我们的多层神经网络
+\section{BP神经网络}
+\par 
+BP神经网络主要原理类似我们之前提到的梯度下降,通过我们的反馈函数对我们的值进行调整
+\par 
+在BP神经网络中,我们需要去为所有的值去指定连接权,通过连接权计算一个神经元的输入和输出,在此处我们假设从输入层到隐层的输入
+边权为 $v_ih$, 从隐层到输出层的参数为 $v_{ih}$ 
+\begin{equation}
+    \begin{aligned}
+        &\mbox{第j个输出神经元的输入:} \beta_j = \sum_{h=1}^q w_{h_j}b_h\\
+        &\mbox{第h个隐层神经元的输入:} \alpha_h = \sum_{i=1}^d v_{i_h}x_i
+    \end{aligned}
+\end{equation}
+\begin{equation}
+    \mbox{网格在$(x_k, y_k)$上的均方误差} E_k= \frac{1}{2}\sum_{j=1}^l (y^{k}-y^k)
+\end{equation}
+
+\end{document}
