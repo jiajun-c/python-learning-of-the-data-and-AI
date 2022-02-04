@@ -1,0 +1,41 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\title{第四章-随机变量}
+\author{程家骏}
+\date{\today}
+\begin{document}
+\maketitle
+\section{随机变量}
+随机变量指的是在某些条件下取到一些值的可能性,这些定义在样本空间上的实值函数,称为随机变量
+\section{离散型随机变量}
+如果一个随机变量有多个可能取值,则称这个随机变量为离散型的,对于一个离散型的随机变量X, 我们定义X的概率分布列为
+$p(a) = p\{X=a\}$ 同时将保证我们的概率总和为1
+
+\section{期望}
+\begin{equation}
+    E[x] = \sum_{i=1}^N p(x)
+\end{equation}
+\section{方差}
+同经典概念
+\section{伯努利随机变量和二项式随机变量}
+
+考虑一个试验, 其结果分为两类,成功或者是失败,令 x = 1 when success 0 when fail
+
+那么X的分布列为p(0) = P\{X = 0\} = 1 - p,p(1) = p\{X = 1\} = p
+假设我们进行n次独立重复性实验, 每次试验成功的概率为p,失败的概率为1-p, 如果x表示的是n次试验中成功的次数,那么称X为参数为(n,p)的二项
+随机变量,因此,伯努利随机变量是参数为(1,p)的二项随机变量
+
+参数为(n,p)的二项随机变量的分布列为
+\begin{equation}
+    p(i) = C_n^i p^i(1-p)^{n-i}
+\end{equation}
+\section{柏松随机变量}
+如果对于一个取值于0, 1, 2...的随机变量对于某一个$\lambda > 0$ 其分布列如下
+\begin{equation}
+    p(i) = P\{X = i\} = e^{\lambda}\frac{\lambda^i}{i!}\space\space( i = 0,1,2...)
+\end{equation}
+我们可以得到$\sum_{i=0}^{\infty}p(i) = e^{-\lambda}e^{\lambda} = 1$
+\end{document}

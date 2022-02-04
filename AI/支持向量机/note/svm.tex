@@ -1,0 +1,29 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\title{SVM}
+\author{Half}
+\date{\today}
+\begin{document}
+\maketitle
+\section{间隔和支持向量}
+在样本空间中,我们可以将划分超平面转换为
+\begin{equation}
+    w^Tx+b = 0
+\end{equation}
+\par 
+其中$w =(w_1,w_2..w_n)$,决定了我们的超平面的方向,b表示的是我们的超平面与远点的距离,样本中的任意点x到我们的超平面(w, b)的距离为
+$r = \frac{|w^Tx+b|}{||w||}$
+
+假设我们的超平面能够将训练样本正确分类, 即对于$(x_i,y_i)\in D$,若$y_i=+1$,
+则有$w^Tx_i+b >0$,若$y_i=-1$则有$w^Tx_i+b<0$,两个异类支持向量到超平面的距离只和为
+$r = \frac{2}{||w||}$,我们将他称为margin
+\section{对偶问题}
+我们希望通过2最大化我们的margin来得到大间隔划分超平面所对应的模型
+其中的w和b是我们的模型参数
+
+\section{核函数}
+
+\end{document}
