@@ -45,4 +45,11 @@ All the markdown file will have the relevant the .py file that is executable
 
 ## 3. The decision tree
 You can find the jupyter notebook and the training data in the folder named 决策树
+
 [link](./AI/决策树/d_tree_use.md)
+
+## 4.The neural network
+[note](./AI/神经网络/note/NN.pdf)
+
+## 5.The Perceptron
+[note](./统计学习方法/2.ipynb)
